@@ -8,11 +8,24 @@
 import UIKit
 
 class ViewControllerAdd: UIViewController {
-
+    
+    
+    @IBOutlet weak var nameOutlet: UITextField!
+    @IBOutlet weak var gradeOutlet: UISegmentedControl!
+    @IBOutlet weak var bandOutlet: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+   
+    
+    
+    
+    @IBAction func addAction(_ sender: UIButton) {
     }
     
 

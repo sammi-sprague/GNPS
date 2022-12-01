@@ -23,7 +23,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rJH-oc-iPz">
                                         <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJH-oc-iPz" id="HXp-zt-wHo">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJH-oc-iPz" id="HXp-zt-wHo" customClass="TableViewCell" customModule="GNPS" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -39,6 +39,9 @@
                                     <segment title="Band"/>
                                     <segment title="Grade"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3ju-rj-3cL"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,6 +86,9 @@
                                     <segment title="Concert"/>
                                     <segment title="Symphonic"/>
                                 </segments>
+                                <connections>
+                                    <action selector="bandAction:" destination="78p-Hw-sJZ" eventType="valueChanged" id="xOK-Qc-5fk"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zIy-9I-eDe">
                                 <rect key="frame" x="67" y="321" width="256" height="32"/>
@@ -99,12 +105,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Sax"/>
+                                <connections>
+                                    <action selector="addAction:" destination="78p-Hw-sJZ" eventType="touchUpInside" id="AIB-FN-7Rl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PVX-fW-LBQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="sQo-MP-snM"/>
+                    <connections>
+                        <outlet property="bandOutlet" destination="FE7-Cq-bbf" id="Fgk-mS-NbX"/>
+                        <outlet property="gradeOutlet" destination="zIy-9I-eDe" id="wbq-64-gEQ"/>
+                        <outlet property="nameOutlet" destination="dv6-Lj-3NQ" id="hfb-6V-EcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biB-ce-LJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
