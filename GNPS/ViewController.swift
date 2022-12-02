@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-var test = 0
+var test = 5
+var test2 = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
