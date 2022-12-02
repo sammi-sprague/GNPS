@@ -10,8 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 var test = 5
 var test2 = 5
-    var saxPerson1 = Saxes(gnps: 1, grade: 1, age: 1, name: "No")
-    var saxList = [saxPerson1]
+    var saxList = [Saxes(gnps: 1, grade: 1, age: 1, name: "No")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
