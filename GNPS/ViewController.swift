@@ -7,6 +7,11 @@
 
 import UIKit
 
+class AppData{
+    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No")]
+}
+
+class ViewController: UIViewController {
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return saxList.count
