@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="191" width="390" height="619"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="rJH-oc-iPz" customClass="TableViewCell" customModule="GNPS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="rJH-oc-iPz" customClass="TableViewCell">
                                         <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJH-oc-iPz" id="HXp-zt-wHo" customClass="TableViewCell" customModule="GNPS" customModuleProvider="target">
@@ -57,6 +57,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bandOutlet" destination="odV-uy-Dxx" id="eZ9-rY-t5H"/>
+                                            <outlet property="nameOutlet" destination="9oG-WB-RaX" id="p6f-Mw-VhU"/>
+                                            <outlet property="pointsOutlet" destination="fhf-JN-g5I" id="1b8-PW-2z8"/>
+                                            <outlet property="yearOutlet" destination="RtL-nx-Npe" id="r8P-1h-jpW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -90,6 +96,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="eVL-mZ-5qY" id="egx-82-BnK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

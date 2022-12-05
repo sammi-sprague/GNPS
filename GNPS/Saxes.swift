@@ -17,12 +17,14 @@ public class Saxes{
     enum Band{
         case Symphonic, Concer
     }
+    var b: Band
     
-    init(gnps: Int, grade: Int, age: Int, name: String){
+    init(gnps: Int, grade: Int, age: Int, name: String, band: Band){
         self.gnps = gnps
         self.grade = grade
         self.age = age
         self.name = name
+        b = band
     }
     
     func recipt()->String{
