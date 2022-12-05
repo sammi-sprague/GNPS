@@ -26,7 +26,7 @@ class ViewControllerAdd: UIViewController {
     
     
     @IBAction func addAction(_ sender: UIButton) {
-        AppData.saxList.append(Saxes(gnps: 1, grade: 2, name: "No"))
+        AppData.saxList.append(Saxes(gnps: 1, grade: 2, name: "No", band: .Concert))
     }
     
 

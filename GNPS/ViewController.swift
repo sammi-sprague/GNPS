@@ -8,10 +8,10 @@
 import UIKit
 
 class AppData{
-    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No")]
+    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: .Concert)]
 }
 
-class ViewController: UIViewController {
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return saxList.count
@@ -26,10 +26,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     @IBOutlet weak var tableViewOutlet: UITableView!
-    
+        
 var test = 5
 var test2 = 5
-    var saxList = [Saxes(gnps: 1, grade: 1, age: 1, name: "No", band: .Symphonic)]
+    var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: .Symphonic)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
