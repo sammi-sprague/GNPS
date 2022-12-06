@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell2
         cell.configure(sax: saxList[indexPath.row])
         return cell
             

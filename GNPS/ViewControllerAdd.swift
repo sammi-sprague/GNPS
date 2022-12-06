@@ -12,7 +12,8 @@ class ViewControllerAdd: UIViewController {
     
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var gradeOutlet: UISegmentedControl!
-    @IBOutlet weak var bandOutlet: UISegmentedControl!
+    
+    @IBOutlet weak var bOutlet: UISegmentedControl!
     
     
     override func viewDidLoad() {
