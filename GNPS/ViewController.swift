@@ -8,7 +8,11 @@
 import UIKit
 
 class AppData{
-    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: .Concert)]
+    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 1)]
+    
+    enum Band{
+        case Symphonic, Concert
+    }
 }
 
 
@@ -30,8 +34,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let defaults = UserDefaults.standard
     
         
-
-    var saxList = [Saxes(gnps: 1, grade: 11, name: "No", band: .Symphonic)]
+var test = 5
+var test2 = 5
+    var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 2)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
