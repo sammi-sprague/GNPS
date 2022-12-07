@@ -17,15 +17,19 @@ public class Saxes{
     }
     var b: Band
     
-    init(gnps: Int, grade: Int, name: String, band: Band){
+    init(gnps: Int, grade: Int, name: String, band: Int){
         self.gnps = gnps
         self.grade = grade
         self.name = name
-        b = band
+        if band == 1{
+            b = .Concert
+        }else{
+            b = .Symphonic
+        }
+        
+        func recipt()->String{
+            return("\(self.name)")
+        }
+        
     }
-    
-    func recipt()->String{
-        return("\(self.name)")
-    }
-    
 }

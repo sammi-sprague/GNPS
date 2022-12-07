@@ -12,22 +12,18 @@ class ViewControllerAdd: UIViewController {
     
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var gradeOutlet: UISegmentedControl!
-    
     @IBOutlet weak var bOutlet: UISegmentedControl!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-   
-    
     
     
     @IBAction func addAction(_ sender: UIButton) {
-        AppData.saxList.append(Saxes(gnps: 1, grade: 2, name: "No", band: .Concert))
+        AppData.saxList.append(Saxes(gnps: 0, grade: gradeOutlet.selectedSegmentIndex+9, name: String(nameOutlet.text!), band: bOutlet.selectedSegmentIndex))
     }
     
 
