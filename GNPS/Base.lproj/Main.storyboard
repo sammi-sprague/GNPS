@@ -90,11 +90,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DFX-ba-fH2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wMA-NE-y2A">
-                            <connections>
-                                <segue destination="78p-Hw-sJZ" kind="show" id="Kdt-JR-zlA"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="wMA-NE-y2A">
+                                <connections>
+                                    <segue destination="78p-Hw-sJZ" kind="show" id="Kdt-JR-zlA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="Z3f-Sj-6UT">
+                                <connections>
+                                    <action selector="saveAction:" destination="BYZ-38-t0r" id="eia-Nz-ovR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewOutlet" destination="eVL-mZ-5qY" id="egx-82-BnK"/>

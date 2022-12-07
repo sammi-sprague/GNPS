@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Saxes{
+public class Saxes: Codable{
     
     var gnps: Int
     var grade: Int

@@ -13,6 +13,7 @@ class AppData{
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return saxList.count
     }
@@ -26,18 +27,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     @IBOutlet weak var tableViewOutlet: UITableView!
+    let defaults = UserDefaults.standard
+    
         
-var test = 5
-var test2 = 5
-    var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: .Symphonic)]
+
+    var saxList = [Saxes(gnps: 1, grade: 11, name: "No", band: .Symphonic)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
+        
+        
+        if let saxList = UserDefaults.standard.data(forKey: "myList") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Saxes].self, from: saxList) {
+                AppData.saxList = decoded
+            }
+        }
+        
     }
     
+    
+    @IBAction func saveAction(_ sender: Any) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.saxList) {
+            UserDefaults.standard.set(encoded, forKey: "myList")
+        }
+    }
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {
     }
