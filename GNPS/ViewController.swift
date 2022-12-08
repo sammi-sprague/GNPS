@@ -13,6 +13,8 @@ class AppData{
     enum Band{
         case Symphonic, Concert
     }
+    
+    //static var selected: Saxes!
 }
 
 
@@ -54,12 +56,28 @@ var test2 = 5
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableViewOutlet.reloadData()
+    }
     
     @IBAction func saveAction(_ sender: Any) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(AppData.saxList) {
             UserDefaults.standard.set(encoded, forKey: "myList")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //AppData.selected = AppData.saxList[indexPath.row]
+        self.performSegue(withIdentifier: "toAddSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsVC = segue.destination as! ViewControllerSelected
+        let selectedRow = tableViewOutlet.indexPathForSelectedRow!.row
+        detailsVC.sax = AppData.saxList[selectedRow]
+    
+    
     }
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {

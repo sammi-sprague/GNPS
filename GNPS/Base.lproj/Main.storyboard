@@ -105,11 +105,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewOutlet" destination="eVL-mZ-5qY" id="egx-82-BnK"/>
+                        <segue destination="OBp-8U-GQD" kind="show" identifier="toAddSegue" id="LxR-9R-okL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="1023" y="4"/>
         </scene>
         <!--View Controller Add-->
         <scene sceneID="sFz-bE-5Q3">
@@ -177,10 +178,11 @@
                         <viewLayoutGuide key="safeArea" id="l1R-4r-YDq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aez-ic-zLV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHc-CW-UdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="4"/>
+            <point key="canvasLocation" x="1023" y="710"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="En2-ET-mzf">
