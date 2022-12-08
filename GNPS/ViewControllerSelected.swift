@@ -9,7 +9,7 @@ import UIKit
 
 class ViewControllerSelected: UIViewController {
 
-    var sax: Saxes!
+    //var sax: Saxes!
     
     
     override func viewDidLoad() {

@@ -8,7 +8,8 @@
 import UIKit
 
 class AppData{
-    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: "Concert")]
+    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 0)]
+    static var sax = saxList[0]
     
 }
 
@@ -63,17 +64,17 @@ var test2 = 5
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //AppData.selected = AppData.saxList[indexPath.row]
         self.performSegue(withIdentifier: "toAddSegue", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailsVC = segue.destination as! ViewControllerSelected
-        let selectedRow = tableViewOutlet.indexPathForSelectedRow!.row
-        detailsVC.sax = AppData.saxList[selectedRow]
-    
-    
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        let detailsVC = segue.destination as! ViewControllerSelected
+//        let selectedRow = tableViewOutlet.indexPathForSelectedRow!.row
+//        detailsVC.sax = AppData.saxList[selectedRow]
+//
+//
+//    }
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {
     }

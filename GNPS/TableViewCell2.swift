@@ -34,7 +34,7 @@ class TableViewCell2: UITableViewCell {
         gradeOutlet.text = "\(sax.grade)"
         nameOutlet.text = sax.name
         pointsOutlet.text = "\(sax.gnps)"
-        bandTypeOutlet.text = "\(sax.b)"
+        bandTypeOutlet.text = "\(sax.band)"
     }
 
 }
