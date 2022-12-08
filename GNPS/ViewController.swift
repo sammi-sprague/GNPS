@@ -8,11 +8,8 @@
 import UIKit
 
 class AppData{
-    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 1)]
+    static var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: "Concert")]
     
-    enum Band{
-        case Symphonic, Concert
-    }
 }
 
 

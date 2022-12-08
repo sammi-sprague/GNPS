@@ -12,24 +12,20 @@ public class Saxes: Codable{
     var gnps: Int
     var grade: Int
     var name: String
-    enum Band{
-        case Symphonic, Concert
-    }
-    var b: Band
+    var band: String
     
     init(gnps: Int, grade: Int, name: String, band: Int){
         self.gnps = gnps
         self.grade = grade
         self.name = name
-        if band == 1{
-            b = .Concert
+        if band == 0{
+            self.band = "Concert"
         }else{
-            b = .Symphonic
+            self.band = "Symphonic"
         }
         
-        func recipt()->String{
-            return("\(self.name)")
-        }
-        
+    }
+    func recipt()->String{
+        return("\(self.name)")
     }
 }
