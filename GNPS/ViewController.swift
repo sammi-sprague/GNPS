@@ -17,14 +17,7 @@ class AppData{
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell2
-        cell.configure(sax: saxList[indexPath.row])
-        return cell
-            
-        
-    }
+   
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     let defaults = UserDefaults.standard
@@ -62,8 +55,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! TableViewCell2
         cell.configure(sax: AppData.saxList[indexPath.row])
         return cell
-            
-        
     }
     
     @IBAction func saveAction(_ sender: Any) {
@@ -86,6 +77,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    }
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0{
+            AppData.saxList = AppData.saxList.sorted(by: { $0.gnps > $1.gnps })
+        }else if sender.selectedSegmentIndex == 1{
+            AppData.saxList = AppData.saxList.sorted(by: { $0.name > $1.name })
+        }else if sender.selectedSegmentIndex == 2{
+            AppData.saxList = AppData.saxList.sorted(by: { $0.band > $1.band })
+        }else{
+            AppData.saxList = AppData.saxList.sorted(by: { $0.grade > $1.grade })
+        }
+        
+        tableViewOutlet.reloadData()
+        
     }
     
 
