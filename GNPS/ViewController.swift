@@ -28,13 +28,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         
     }
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     let defaults = UserDefaults.standard
     
         
 var test = 5
 var test2 = 5
-    var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 2)]
+    var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 1)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ var test2 = 5
     
     override func viewWillAppear(_ animated: Bool) {
         tableViewOutlet.reloadData()
+        //print("appear")
     }
     
     @IBAction func saveAction(_ sender: Any) {
