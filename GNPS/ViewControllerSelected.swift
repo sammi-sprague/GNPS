@@ -19,11 +19,16 @@ class ViewControllerSelected: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameOutlet.text = AppData.sax.name
+        sammisLabel.text = "\(AppData.sax.grade)th grade \n\(AppData.sax.band) Band"
+        pointsOutlet.text = "\(AppData.sax.gnps)"
     }
     
 
     
     @IBAction func addPointsAction(_ sender: UIStepper) {
+        AppData.sax.gnps += 1
+        pointsOutlet.text = "\(AppData.sax.gnps)"
     }
     
 }
