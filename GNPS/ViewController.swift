@@ -68,6 +68,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.performSegue(withIdentifier: "toAddSegue", sender: self)
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        print("Deleted")
+
+          AppData.saxList.remove(at: indexPath.row)
+          self.tableViewOutlet.deleteRows(at: [indexPath], with: .automatic)
+      }
+    }
+    
+    
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let detailsVC = segue.destination as! ViewControllerSelected
 //        let selectedRow = tableViewOutlet.indexPathForSelectedRow!.row
