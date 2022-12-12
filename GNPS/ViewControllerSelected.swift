@@ -11,7 +11,10 @@ class ViewControllerSelected: UIViewController {
 
     //var sax: Saxes!
     
+    @IBOutlet weak var nameOutlet: UILabel!
     
+    @IBOutlet weak var sammisLabel: UILabel!
+    @IBOutlet weak var pointsOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,14 +22,8 @@ class ViewControllerSelected: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func addPointsAction(_ sender: UIStepper) {
     }
-    */
-
+    
 }
