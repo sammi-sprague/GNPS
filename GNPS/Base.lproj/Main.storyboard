@@ -19,6 +19,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eVL-mZ-5qY">
                                 <rect key="frame" x="0.0" y="191" width="390" height="619"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="rJH-oc-iPz" customClass="TableViewCell2" customModule="GNPS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
@@ -57,6 +61,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.86585678934230337" blue="0.64686885452741816" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="bandTypeOutlet" destination="9oG-WB-RaX" id="NMT-KZ-lav"/>
                                             <outlet property="gradeOutlet" destination="RtL-nx-Npe" id="jwS-hN-tC8"/>
@@ -75,14 +80,14 @@
                                     <segment title="Band"/>
                                     <segment title="Grade"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="sortAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3ju-rj-3cL"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="1" green="0.86585678929999998" blue="0.64686885449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eVL-mZ-5qY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FNW-mm-1cb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eVL-mZ-5qY" secondAttribute="bottom" id="s0f-10-8Yz"/>
@@ -93,7 +98,7 @@
                     <navigationItem key="navigationItem" id="DFX-ba-fH2">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="wMA-NE-y2A">
-                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="78p-Hw-sJZ" kind="show" id="Kdt-JR-zlA"/>
                                 </connections>
@@ -151,14 +156,17 @@
                                 <rect key="frame" x="137" y="448" width="117" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add Sax"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Sax">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addAction:" destination="78p-Hw-sJZ" eventType="touchUpInside" id="AIB-FN-7Rl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PVX-fW-LBQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.86585678929999998" blue="0.64686885449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="sQo-MP-snM"/>
                     <connections>
@@ -209,12 +217,12 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l1R-4r-YDq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.86585678929999998" blue="0.64686885449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="aez-ic-zLV"/>
                     <connections>
                         <outlet property="nameOutlet" destination="xJx-qm-xOV" id="HL2-ip-JkN"/>
-                        <outlet property="pointsOutlet" destination="eib-Wx-Ni7" id="AD0-rb-0Ha"/>
+                        <outlet property="pointsOutlet" destination="LnA-oe-M9P" id="V0n-2H-t9Z"/>
                         <outlet property="sammisLabel" destination="eib-Wx-Ni7" id="mrN-0S-MDc"/>
                     </connections>
                 </viewController>
@@ -244,12 +252,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
