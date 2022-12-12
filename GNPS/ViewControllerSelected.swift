@@ -14,6 +14,7 @@ class ViewControllerSelected: UIViewController {
     @IBOutlet weak var nameOutlet: UILabel!
     
     @IBOutlet weak var sammisLabel: UILabel!
+
     @IBOutlet weak var pointsOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
