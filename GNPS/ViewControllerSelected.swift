@@ -32,4 +32,10 @@ class ViewControllerSelected: UIViewController {
         pointsOutlet.text = "\(AppData.sax.gnps)"
     }
     
+    
+    @IBAction func addAction(_ sender: Any) {
+    }
+    
+    @IBAction func removeAction(_ sender: Any) {
+    }
 }
