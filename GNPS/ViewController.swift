@@ -106,6 +106,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func addYearAction(_ sender: Any) {
         
+        var i = 0
+        while i < AppData.saxList.count{
+            if AppData.saxList[i].grade == 12{
+                AppData.saxList.remove(at: i)
+                i -= 1
+            }else{
+                AppData.saxList[i].grade += 1
+            }
+            i+=1
+        }
+        tableViewOutlet.reloadData()
+        
+        
+        
+        
     }
     
 
