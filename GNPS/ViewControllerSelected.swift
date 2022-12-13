@@ -33,9 +33,13 @@ class ViewControllerSelected: UIViewController {
     }
     
     
-    @IBAction func addAction(_ sender: Any) {
+    
+    @IBAction func changeBandAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            AppData.sax.band = "Concert"
+        }else{
+            AppData.sax.band = "Symphonic"
+        }
     }
     
-    @IBAction func removeAction(_ sender: Any) {
-    }
 }
