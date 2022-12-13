@@ -25,6 +25,9 @@ class ViewControllerAdd: UIViewController {
     @IBAction func addAction(_ sender: UIButton) {
         AppData.saxList.append(Saxes(gnps: 0, grade: gradeOutlet.selectedSegmentIndex+9, name: String(nameOutlet.text!), band: bOutlet.selectedSegmentIndex))
         //print("added")
+       
+        nameOutlet.text = ""
+
     }
     
 
