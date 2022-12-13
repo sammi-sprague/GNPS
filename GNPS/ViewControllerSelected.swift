@@ -39,4 +39,10 @@ class ViewControllerSelected: UIViewController {
         
     }
     
+    
+    @IBAction func addAction(_ sender: Any) {
+    }
+    
+    @IBAction func removeAction(_ sender: Any) {
+    }
 }
