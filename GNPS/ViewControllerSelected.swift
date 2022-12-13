@@ -28,8 +28,15 @@ class ViewControllerSelected: UIViewController {
 
     
     @IBAction func addPointsAction(_ sender: UIStepper) {
-        AppData.sax.gnps += 1
+        if sender.value == 0{
+            AppData.sax.gnps -= 1
+        }else{
+            AppData.sax.gnps += 1
+        }
+        
+        
         pointsOutlet.text = "\(AppData.sax.gnps)"
+        
     }
     
 }
