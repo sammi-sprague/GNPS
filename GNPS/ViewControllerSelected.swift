@@ -42,6 +42,7 @@ class ViewControllerSelected: UIViewController {
     }
     
     @IBAction func changeBandAction(_ sender: UISegmentedControl) {
+        print("yes")
         if sender.selectedSegmentIndex == 0{
             AppData.sax.band = "Concert"
         }else{
