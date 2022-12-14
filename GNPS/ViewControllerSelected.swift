@@ -16,6 +16,9 @@ class ViewControllerSelected: UIViewController {
     @IBOutlet weak var sammisLabel: UILabel!
 
     @IBOutlet weak var pointsOutlet: UILabel!
+    
+    @IBOutlet weak var changeBandOutlet: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,4 +45,7 @@ class ViewControllerSelected: UIViewController {
         }
     }
     
+    @IBAction func changeAction(_ sender: Any) {
+        
+    }
 }
