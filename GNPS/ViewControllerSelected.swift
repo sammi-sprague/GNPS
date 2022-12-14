@@ -44,16 +44,21 @@ class ViewControllerSelected: UIViewController {
         pointsOutlet.text = "\(AppData.sax.gnps)"
     }
     
-    @IBAction func changeBandAction(_ sender: UISegmentedControl) {
-        print("yes")
-        if sender.selectedSegmentIndex == 0{
+//    @IBAction func changeBandAction(_ sender: UISegmentedControl) {
+//        print("yes")
+//        if sender.selectedSegmentIndex == 0{
+//            AppData.sax.band = "Concert"
+//        }else{
+//            AppData.sax.band = "Symphonic"
+//        }
+//    }
+    
+    @IBAction func changeAction(_ sender: Any) {
+        if changeBandOutlet.selectedSegmentIndex == 0{
             AppData.sax.band = "Concert"
         }else{
             AppData.sax.band = "Symphonic"
         }
-    }
-    
-    @IBAction func changeAction(_ sender: Any) {
-        
+        sammisLabel.text = "\(AppData.sax.grade)th grade \n\(AppData.sax.band) Band"
     }
 }

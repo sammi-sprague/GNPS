@@ -227,11 +227,6 @@
                                     <segment title="Concert"/>
                                     <segment title="Symphonic"/>
                                 </segments>
-                                <connections>
-                                    <action selector="changeBand:" destination="OBp-8U-GQD" eventType="valueChanged" id="cP4-Tj-uBA"/>
-                                    <action selector="changeBandAction:" destination="OBp-8U-GQD" eventType="valueChanged" id="gvZ-JO-c5G"/>
-                                    <action selector="removeAction:" destination="OBp-8U-GQD" eventType="valueChanged" id="JF3-ul-ek6"/>
-                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvw-E4-gYL">
                                 <rect key="frame" x="203" y="530" width="40" height="40"/>

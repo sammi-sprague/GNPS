@@ -66,6 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "toAddSegue", sender: self)
+        AppData.sax = AppData.saxList[indexPath.row]
     }
     
     
@@ -80,20 +81,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let detailsVC = segue.destination as! ViewControllerSelected
-//        let selectedRow = tableViewOutlet.indexPathForSelectedRow!.row
-//        detailsVC.sax = AppData.saxList[selectedRow]
-//
-//
-//    }
+    
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0{
             AppData.saxList = AppData.saxList.sorted(by: { $0.gnps > $1.gnps })
         }else if sender.selectedSegmentIndex == 1{
-            AppData.saxList = AppData.saxList.sorted(by: { $0.name > $1.name })
+            AppData.saxList = AppData.saxList.sorted(by: { $0.name < $1.name })
         }else if sender.selectedSegmentIndex == 2{
             AppData.saxList = AppData.saxList.sorted(by: { $0.band > $1.band })
         }else{
