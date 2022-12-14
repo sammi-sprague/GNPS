@@ -40,4 +40,13 @@ class ViewControllerSelected: UIViewController {
         AppData.sax.gnps -= 1
         pointsOutlet.text = "\(AppData.sax.gnps)"
     }
+    
+    @IBAction func changeBandAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            AppData.sax.band = "Concert"
+        }else{
+            AppData.sax.band = "Symphonic"
+        }
+    }
+    
 }
