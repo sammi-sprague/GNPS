@@ -22,6 +22,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableViewOutlet: UITableView!
     let defaults = UserDefaults.standard
     
+    let alert = UIAlertController(title: "Delete Seniors", message: "Completing this action will delete all seniors from the list and increases every other person's grade level.", preferredStyle: .alert)
+//    let okAction = UIAlertAction(title: "Ok", style: .default){_ in
+//        newyear()
+//    }
+    let noAction = UIAlertAction(title: "Cancel", style: .default)
         
     //var saxList = [Saxes(gnps: 1, grade: 1, name: "No", band: 2)]
     
@@ -39,7 +44,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         
+        let okAction = UIAlertAction(title: "Ok", style: .default){_ in
+            self.newyear()
+        }
+        
+        alert.addAction(okAction)
+        alert.addAction(noAction)
     }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         tableViewOutlet.reloadData()
@@ -101,6 +115,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func addYearAction(_ sender: Any) {
         
+        present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    func newyear(){
         var i = 0
         while i < AppData.saxList.count{
             if AppData.saxList[i].grade == 12{
@@ -112,10 +137,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             i+=1
         }
         tableViewOutlet.reloadData()
-        
-        
-        
-        
     }
     
 
