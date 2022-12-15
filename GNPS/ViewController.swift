@@ -48,8 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.newyear()
         }
         
-        alert.addAction(okAction)
         alert.addAction(noAction)
+        alert.addAction(okAction)
     }
     
     
